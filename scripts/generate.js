@@ -151,7 +151,7 @@ function pixelStar(cx, cy, count, index) {
 
 function generateSVG(days, total, username, firstDayOfWeek) {
   const PAD_X      = 20;
-  const PAD_TOP    = 28;
+  const PAD_TOP    = 8;
   const PAD_BOTTOM = 14;
   const cellW = (W - PAD_X * 2) / 53;
   const cellH = (STAR_AREA_BOTTOM - PAD_TOP - PAD_BOTTOM) / 7;
@@ -182,13 +182,8 @@ function generateSVG(days, total, username, firstDayOfWeek) {
     const cx = Math.round((PAD_X + col * cellW + cellW / 2) / 2) * 2;
     const cy = Math.round((PAD_TOP + row * cellH + cellH / 2) / 2) * 2;
 
-    // 시드 기반 jitter (2px 단위 스냅으로 픽셀 느낌 유지)
-    const seed    = (col * 7 + row) * 9301 + 49297;
-    const jitter  = Math.round(((seed % 233280) / 233280 - 0.5) * 3) * 2;
-    const jitterY = Math.round((((seed * 13) % 233280) / 233280 - 0.5) * 3) * 2;
-
-    const x = cx + jitter;
-    const y = cy + jitterY;
+    const x = cx;
+    const y = cy;
 
     // 가장 큰 별(7×7) 기준 마진 8px
     if (y < PAD_TOP + 8 || y > STAR_AREA_BOTTOM - PAD_BOTTOM - 8) return;
@@ -198,7 +193,7 @@ function generateSVG(days, total, username, firstDayOfWeek) {
   });
 
   // 레이블: Mona12 12px (픽셀 또렷한 권장 크기)
-  const label = `<text x="${PAD_X}" y="18"
+  const label = `<text x="${PAD_X}" y="${STAR_AREA_BOTTOM + 14}"
     font-family="'Mona12', monospace"
     font-size="12"
     fill="#8899CC"
