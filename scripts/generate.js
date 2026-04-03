@@ -11,7 +11,7 @@ const TOKEN    = process.env.GITHUB_TOKEN;
 // ── 캔버스 & 별 영역 설정 ────────────────────────────────────────────────────
 const W                = 860;
 const H                = 420;
-const STAR_AREA_BOTTOM = 190; // 별이 배치되는 y 최대값 (px)
+const STAR_AREA_BOTTOM = 210; // 별이 배치되는 y 최대값 (px)
 
 // ── 0. Mona12 woff2 준비 (없으면 CDN에서 자동 다운로드) ─────────────────────
 
@@ -150,7 +150,7 @@ function pixelStar(cx, cy, count, index) {
 // ── 3. SVG 생성 ─────────────────────────────────────────────────────────────
 
 function generateSVG(days, total, username, firstDayOfWeek) {
-  const PAD_X      = 20;
+  const PAD_X      = 16;
   const PAD_TOP    = 35;
   const PAD_BOTTOM = 14;
   const cellW = (W - PAD_X * 2) / 53;
