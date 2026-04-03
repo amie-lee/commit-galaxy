@@ -151,7 +151,7 @@ function pixelStar(cx, cy, count, index) {
 
 function generateSVG(days, total, username, firstDayOfWeek) {
   const PAD_X      = 20;
-  const PAD_TOP    = 8;
+  const PAD_TOP    = 28;
   const PAD_BOTTOM = 14;
   const cellW = (W - PAD_X * 2) / 53;
   const cellH = (STAR_AREA_BOTTOM - PAD_TOP - PAD_BOTTOM) / 7;
