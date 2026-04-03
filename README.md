@@ -44,13 +44,13 @@ This creates `galaxy.svg` immediately. After that, it runs automatically every d
 ### 5. Add to your profile README
 
 ```markdown
-![My Galaxy](https://raw.githubusercontent.com/<username>/galaxy-commits/main/galaxy.svg)
+[![My Galaxy](https://raw.githubusercontent.com/<username>/commit-galaxy/main/galaxy.svg)](https://github.com/amie-lee/commit-galaxy)
 ```
 
 If the repo is named `<username>/<username>`, you can use a relative path:
 
 ```markdown
-![My Galaxy](./galaxy.svg)
+[![My Galaxy](./galaxy.svg)](https://github.com/amie-lee/commit-galaxy)
 ```
 
 ---
