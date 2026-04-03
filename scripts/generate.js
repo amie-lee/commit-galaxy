@@ -151,7 +151,7 @@ function pixelStar(cx, cy, count, index) {
 
 function generateSVG(days, total, username, firstDayOfWeek) {
   const PAD_X      = 20;
-  const PAD_TOP    = 28;
+  const PAD_TOP    = 35;
   const PAD_BOTTOM = 14;
   const cellW = (W - PAD_X * 2) / 53;
   const cellH = (STAR_AREA_BOTTOM - PAD_TOP - PAD_BOTTOM) / 7;
@@ -193,7 +193,7 @@ function generateSVG(days, total, username, firstDayOfWeek) {
   });
 
   // 레이블: Mona12 12px (픽셀 또렷한 권장 크기)
-  const label = `<text x="${PAD_X}" y="16"
+  const label = `<text x="${PAD_X}" y="20"
     font-family="'Mona12', monospace"
     font-size="12"
     fill="#FFFFFF"
