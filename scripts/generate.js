@@ -10,7 +10,7 @@ const TOKEN    = process.env.GITHUB_TOKEN;
 
 // ── 캔버스 & 별 영역 설정 ────────────────────────────────────────────────────
 const W                = 860;
-const H                = 350;
+const H                = 420;
 const STAR_AREA_BOTTOM = 190; // 별이 배치되는 y 최대값 (px)
 
 // ── 0. Mona12 woff2 준비 (없으면 CDN에서 자동 다운로드) ─────────────────────
@@ -193,10 +193,10 @@ function generateSVG(days, total, username, firstDayOfWeek) {
   });
 
   // 레이블: Mona12 12px (픽셀 또렷한 권장 크기)
-  const label = `<text x="${PAD_X}" y="${STAR_AREA_BOTTOM + 14}"
+  const label = `<text x="${PAD_X}" y="16"
     font-family="'Mona12', monospace"
     font-size="12"
-    fill="#8899CC"
+    fill="#FFFFFF"
     opacity="0.85"
     style="image-rendering: pixelated;"
   >${username}'s galaxy · ${total.toLocaleString()} contributions</text>`;
