@@ -17,7 +17,7 @@ const STAR_AREA_BOTTOM = 190; // 별이 배치되는 y 최대값 (px)
 
 const FONT_PATH = path.join(__dirname, "..", "mona12.woff2");
 const FONT_URL  =
-  "https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/Mona12-Regular.woff2";
+  "https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/Mona12.woff2";
 
 async function ensureFont() {
   if (fs.existsSync(FONT_PATH)) {
